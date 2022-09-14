@@ -1,0 +1,151 @@
+<html>
+    <header>
+        <script src="apexcharts.js"></script>
+    </header>
+    <body>
+        <div id="chart" style="padding:200px;"></div>
+        <script>
+          var options = {
+              chart: {
+                width: 1600,
+                height: 700,
+                type: "line",
+                stacked: false,
+                // animations: {speed: [0.5, 0.5, 0.5]}
+              },
+              dataLabels: {
+                enabled: false
+              },
+              colors: ["#FF1654", "#247BA0", "#843f32", "#640921"],
+              series: [
+                {
+                  name: "Series A",
+                  data: [1.4, 2, 2.5, 1.5, 2.5, 2.8, 3.8, 4.0, 2.2, 3.5, 3.9]
+                },
+                {
+                  name: "Series B",
+                  data: [10, 12, 30, 36, 44, 48, 30, 52, 40, 32, 31]
+                },
+                {
+                  name: "Series C",
+                  data: [5, 2, , 20, 25, 20, 35, 30, 43, 32, 22]
+                }              
+,
+                {
+                  name: "Series C",
+                  data: [3, 10, 2, 5, 3, 7, 2, 3, 3, 5, 7]
+                }  
+              ],
+              stroke: {
+                width: [5, 5, 5, 5]
+              },
+              plotOptions: {
+                bar: {
+                  columnWidth: "20%"
+                }
+              },
+              xaxis: {
+                categories: [2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022],
+              },
+              yaxis: [
+                {
+                  axisTicks: {
+                    show: true
+                  },
+                  axisBorder: {
+                    show: true,
+                    color: "#FF1654"
+                  },
+                  labels: {
+                    style: {
+                      colors: "#FF1654"
+                    }
+                  },
+                  title: {
+                    text: "Series A",
+                    style: {
+                      color: "#FF1654"
+                    }
+                  }
+                },
+                {
+                  opposite: true,
+                  axisTicks: {
+                    show: true
+                  },
+                  axisBorder: {
+                    show: true,
+                    color: "#247BA0"
+                  },
+                  labels: {
+                    style: {
+                      colors: "#247BA0"
+                    }
+                  },
+                  title: {
+                    text: "Series B",
+                    style: {
+                      color: "#247BA0"
+                    }
+                  }
+                }
+              ],
+              tooltip: {
+                shared: false,
+                intersect: true,
+                x: {
+                  show: false
+                }
+              },
+              legend: {
+                horizontalAlign: "left",
+                offsetX: 40
+              },
+              markers: {
+                discrete: [
+                  {seriesIndex: 0, dataPointIndex: 1, shape: "circle", size: 15, fillColor: "#837756", strokeColor:"#228301"},
+                  {seriesIndex: 0, dataPointIndex: 2, shape: "triangle-trans", size: 15, fillColor: "#837756", strokeColor:"#228301"},
+                  {seriesIndex: 0, dataPointIndex: 3, shape: "circle-trans", size: 15, fillColor: "#837756", strokeColor:"#228301"},
+                  {seriesIndex: 0, dataPointIndex: 4, shape: "rect", size: 15, fillColor: "#837756", strokeColor:"#228301"},
+                  {seriesIndex: 0, dataPointIndex: 5, shape: "circle", size: 15, fillColor: "#837756", strokeColor:"#228301"},
+                  {seriesIndex: 0, dataPointIndex: 6, shape: "diamond", size: 15, fillColor: "#837756", strokeColor:"#228301"},
+                  {seriesIndex: 0, dataPointIndex: 7, shape: "circle-pink", size: 15, fillColor: "#837756", strokeColor:"#228301"},
+                  {seriesIndex: 0, dataPointIndex: 8, shape: "circle", size: 15, fillColor: "#837756", strokeColor:"#228301"},
+                  {seriesIndex: 0, dataPointIndex: 9, shape: "circle-trans", size: 15, fillColor: "#837756", strokeColor:"#228301"},
+                  {seriesIndex: 1, dataPointIndex: 1, shape: "diamond", size: 15, fillColor: "#837756", strokeColor:"#228301"},
+                  {seriesIndex: 1, dataPointIndex: 2, shape: "rect-trans", size: 15, fillColor: "#837756", strokeColor:"#228301"},
+                  {seriesIndex: 1, dataPointIndex: 3, shape: "diamond", size: 15, fillColor: "#837756", strokeColor:"#228301"},
+                  {seriesIndex: 1, dataPointIndex: 4, shape: "rect", size: 15, fillColor: "#837756", strokeColor:"#228301"},
+                  {seriesIndex: 1, dataPointIndex: 5, shape: "rect", size: 15, fillColor: "#837756", strokeColor:"#228301"},
+                  {seriesIndex: 1, dataPointIndex: 6, shape: "triangle-trans", size: 15, fillColor: "#837756", strokeColor:"#228301"},   
+                  {seriesIndex: 1, dataPointIndex: 7, shape: "rect", size: 15, fillColor: "#837756", strokeColor:"#228301"},
+                  {seriesIndex: 1, dataPointIndex: 8, shape: "heart", size: 15, fillColor: "#837756", strokeColor:"#228301"},
+                  {seriesIndex: 1, dataPointIndex: 9, shape: "rect", size: 15, fillColor: "#837756", strokeColor:"#228301"},             
+                  {seriesIndex: 2, dataPointIndex: 1, shape: "diamond", size: 15, fillColor: "#837756", strokeColor:"#228301"},
+                  {seriesIndex: 2, dataPointIndex: 2, shape: "heart", size: 15, fillColor: "#837756", strokeColor:"#228301"},
+                  {seriesIndex: 2, dataPointIndex: 3, shape: "diamond", size: 15, fillColor: "#837756", strokeColor:"#228301"},
+                  {seriesIndex: 2, dataPointIndex: 4, shape: "rect-trans", size: 15, fillColor: "#837756", strokeColor:"#228301"},
+                  {seriesIndex: 2, dataPointIndex: 5, shape: "diamond", size: 15, fillColor: "#837756", strokeColor:"#228301"},
+                  {seriesIndex: 2, dataPointIndex: 6, shape: "diamond-trans", size: 15, fillColor: "#837756", strokeColor:"#228301"},               
+                  {seriesIndex: 2, dataPointIndex: 7, shape: "circle-pink", size: 15, fillColor: "#837756", strokeColor:"#228301"},               
+                  {seriesIndex: 2, dataPointIndex: 8, shape: "rect", size: 15, fillColor: "#837756", strokeColor:"#228301"},               
+                  {seriesIndex: 2, dataPointIndex: 9, shape: "diamond", size: 15, fillColor: "#837756", strokeColor:"#228301"},               
+                  {seriesIndex: 3, dataPointIndex: 1, shape: "triangle-trans", size: 15, fillColor: "#837756", strokeColor:"#228301"},
+                  {seriesIndex: 3, dataPointIndex: 2, shape: "diamond", size: 15, fillColor: "#837756", strokeColor:"#228301"},
+                  {seriesIndex: 3, dataPointIndex: 3, shape: "circle-trans", size: 15, fillColor: "#837756", strokeColor:"#228301"},
+                  {seriesIndex: 3, dataPointIndex: 4, shape: "triangle", size: 15, fillColor: "#837756", strokeColor:"#228301"},
+                  {seriesIndex: 3, dataPointIndex: 5, shape: "rect", size: 15, fillColor: "#837756", strokeColor:"#228301"},
+                  {seriesIndex: 3, dataPointIndex: 6, shape: "triangle", size: 15, fillColor: "#837756", strokeColor:"#228301"},               
+                  {seriesIndex: 3, dataPointIndex: 7, shape: "triangle", size: 15, fillColor: "#837756", strokeColor:"#228301"},               
+                  {seriesIndex: 3, dataPointIndex: 8, shape: "circle-pink", size: 15, fillColor: "#837756", strokeColor:"#228301"},               
+                  {seriesIndex: 3, dataPointIndex: 9, shape: "triangle", size: 15, fillColor: "#837756", strokeColor:"#228301"},                    ]
+              }
+
+            };
+
+            var chart = new ApexCharts(document.querySelector("#chart"), options);
+
+            chart.render();
+        </script>
+    </body>
+</html>
